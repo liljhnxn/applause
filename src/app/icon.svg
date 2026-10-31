@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#10131A" />
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="rgba(168, 85, 247, 0.4)" />
+  <path d="M16 6L18.8 12.2L25 14L18.8 15.8L16 22L13.2 15.8L7 14L13.2 12.2L16 6Z" fill="url(#sparkle-grad)" />
+  <circle cx="23" cy="9" r="1.5" fill="#34D399" />
+  <circle cx="9" cy="21" r="1.5" fill="#A855F7" />
+  <defs>
+    <linearGradient id="sparkle-grad" x1="7" y1="6" x2="25" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C084FC" />
+      <stop offset="1" stop-color="#34D399" />
+    </linearGradient>
+  </defs>
+</svg>
+
