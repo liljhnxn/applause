@@ -12,8 +12,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Applause — Give good work its recognition",
   description:
-    "A decentralized appreciation board where users publicly recognize developers, creators, and contributors on-chain via Botchain Testnet.",
-  keywords: ["Web3", "Applause", "Botchain", "Ethereum", "Recognition", "Solidity", "MetaMask"],
+    "A decentralized appreciation board where users publicly recognize developers, creators, and contributors on-chain via Botchain.",
+  keywords: ["Web3", "Applause", "Botchain", "Ethereum", "Recognition", "Solidity", "MetaMask", "BOT"],
   icons: {
     icon: "/icon.svg",
   },

@@ -46,7 +46,7 @@ async function main() {
   console.log("==================================================");
 
   const chainId = (await ethers.provider.getNetwork()).chainId.toString();
-  const explorerBase = chainId === "677" ? "https://scan.botchain.ai" : "https://scan.bohr.life";
+  const explorerBase = "https://scan.botchain.ai";
 
   // Export contract address and ABI for easy frontend consumption
   const deployedInfo = {

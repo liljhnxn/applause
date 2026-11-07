@@ -1,4 +1,4 @@
-import { botchainMainnet, botchainTestnet } from "./chain";
+import { botchainMainnet } from "./chain";
 import { APPLAUSE_ABI } from "../contracts/ApplauseAbi";
 
 // Default fallback contract address if not yet set in environment
@@ -66,4 +66,3 @@ export interface AppreciationRecord {
 }
 
 export { APPLAUSE_ABI };
-
