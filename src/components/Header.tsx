@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
-import { botchainTestnet } from "@/config/chain";
+import { botchainMainnet } from "@/config/chain";
 import { shortenAddress, getExplorerAddressUrl } from "@/utils/format";
 import { Sparkles, ExternalLink, LogOut, ChevronDown, CheckCircle2, AlertTriangle } from "lucide-react";
 
@@ -13,7 +13,7 @@ export function Header() {
   const { switchChain, isPending: isSwitching } = useSwitchChain();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const isWrongNetwork = isConnected && chain?.id !== botchainTestnet.id;
+  const isWrongNetwork = isConnected && chain?.id !== botchainMainnet.id;
 
   const handleConnect = () => {
     // Prefer MetaMask connector if available, otherwise first connector
@@ -37,7 +37,7 @@ export function Header() {
                 Applause
               </span>
               <span className="text-[11px] font-medium tracking-wide uppercase px-2 py-0.5 rounded-full bg-charcoal-800 text-brand-green-light border border-charcoal-700">
-                Botchain 968
+                Botchain Mainnet
               </span>
             </div>
             <p className="text-xs text-zinc-400 font-normal">
@@ -50,12 +50,12 @@ export function Header() {
         <div className="flex items-center gap-3">
           {isConnected && isWrongNetwork && (
             <button
-              onClick={() => switchChain({ chainId: botchainTestnet.id })}
+              onClick={() => switchChain({ chainId: botchainMainnet.id })}
               disabled={isSwitching}
               className="hidden sm:flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-lg bg-amber-500/10 text-amber-300 border border-amber-500/30 hover:bg-amber-500/20 transition-colors"
             >
               <AlertTriangle className="w-3.5 h-3.5" />
-              <span>{isSwitching ? "Switching..." : "Switch to Botchain"}</span>
+              <span>{isSwitching ? "Switching..." : "Switch to Botchain (677)"}</span>
             </button>
           )}
 
@@ -82,7 +82,7 @@ export function Header() {
                       <p className="text-xs font-mono text-zinc-200 truncate mt-0.5">{address}</p>
                       <div className="flex items-center gap-1.5 mt-2 text-[11px] text-zinc-400">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-green" />
-                        <span>Botchain Testnet (968)</span>
+                        <span>Botchain Mainnet (677)</span>
                       </div>
                     </div>
 
@@ -90,7 +90,7 @@ export function Header() {
                       {isWrongNetwork && (
                         <button
                           onClick={() => {
-                            switchChain({ chainId: botchainTestnet.id });
+                            switchChain({ chainId: botchainMainnet.id });
                             setDropdownOpen(false);
                           }}
                           className="w-full text-left px-4 py-2 text-xs text-amber-300 hover:bg-charcoal-800 flex items-center gap-2"
@@ -105,7 +105,7 @@ export function Header() {
                         rel="noreferrer"
                         className="w-full text-left px-4 py-2 text-xs text-zinc-300 hover:bg-charcoal-800 flex items-center justify-between"
                       >
-                        <span>View on Bohr Scan</span>
+                        <span>View on Botchain Scan</span>
                         <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
                       </a>
                       <button
@@ -140,4 +140,3 @@ export function Header() {
     </header>
   );
 }
-

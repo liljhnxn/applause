@@ -2,7 +2,7 @@
 
 > **Give good work its recognition.**
 
-Applause is a lightweight, decentralized Web3 appreciation board built on **Botchain Testnet**. It enables users to connect their MetaMask wallet, recognize developers, creators, colleagues, and friends on-chain, and store authentic appreciation records permanently on a public ledger.
+Applause is a lightweight, decentralized Web3 appreciation board built on **Botchain Mainnet**. It enables users to connect their MetaMask wallet, recognize developers, creators, colleagues, and friends on-chain, and store authentic appreciation records permanently on a public ledger.
 
 ---
 
@@ -22,7 +22,7 @@ Applause is a lightweight, decentralized Web3 appreciation board built on **Botc
 - **Interactive Appreciation Board**:
   - Instant category filtering
   - Live search by wallet address or keywords
-  - Direct links to Botchain Block Explorer (`Bohr Scan`)
+  - Direct links to Botchain Block Explorer (`Botchain Scan`)
 - **Personal Wallet Activity**:
   - Dedicated tabbed view of recognitions *received* and *sent* by your connected wallet.
 - **Gas-Conscious & Secure**:
@@ -34,15 +34,16 @@ Applause is a lightweight, decentralized Web3 appreciation board built on **Botc
 
 ---
 
-## ⛓️ Blockchain Configuration (Botchain Testnet)
+## ⛓️ Blockchain Configuration (Botchain Mainnet)
 
 | Parameter | Value |
 |---|---|
-| **Network Name** | Botchain Testnet |
-| **Chain ID** | `968` |
-| **Currency Symbol** | `BOHR` |
-| **RPC URL** | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
+| **Network Name** | Botchain Mainnet |
+| **Chain ID** | `677` |
+| **Currency Symbol** | `BOT` (Total Supply: 150 Million) |
+| **RPC URL** | [https://rpc.botchain.ai](https://rpc.botchain.ai) |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **Deployed Contract** | [`0x8cDCC868F0E758A4902258738b7A0a872d459781`](https://scan.botchain.ai/address/0x8cDCC868F0E758A4902258738b7A0a872d459781#code) |
 
 ---
 
@@ -63,7 +64,7 @@ Applause/
 ├── contracts/
 │   └── Applause.sol          # Main Solidity smart contract
 ├── scripts/
-│   └── deploy.ts             # Hardhat deployment script for Botchain
+│   └── deploy.ts             # Gas-conscious Hardhat deployment script
 ├── test/
 │   └── Applause.test.ts      # Unit tests for validation, gas, and event logs
 ├── src/
@@ -81,7 +82,7 @@ Applause/
 │   │   ├── Footer.tsx        # Explorer links & contract details
 │   │   └── Providers.tsx     # Wagmi + React Query provider wrapper
 │   ├── config/
-│   │   ├── chain.ts          # Botchain Testnet viem chain definition
+│   │   ├── chain.ts          # Botchain Mainnet viem chain definition
 │   │   ├── wagmi.ts          # Wagmi client configuration
 │   │   └── contract.ts       # Contract ABI, address, and category metadata
 │   ├── contracts/
@@ -116,14 +117,11 @@ npm install
 Create a `.env.local` file in the project root:
 
 ```env
-# Deployed contract address on Botchain Testnet (Chain ID 968)
-NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourDeployedContractAddressHere
+# Deployed contract address on Botchain Mainnet (Chain ID 677)
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x8cDCC868F0E758A4902258738b7A0a872d459781
 
-# Botchain Testnet RPC
-RPC_URL=https://rpc.bohr.life
-
-# Deployer private key (only required when running hardhat deployment)
-PRIVATE_KEY=your_private_key_here
+# Botchain Mainnet RPC
+RPC_URL=https://rpc.botchain.ai
 ```
 
 ---
@@ -135,29 +133,6 @@ Run the comprehensive unit test suite:
 ```bash
 npx hardhat test
 ```
-
-This tests:
-- Rejecting zero-address recipients
-- Rejecting self-appreciation
-- Rejecting invalid category numbers (`> 4`)
-- Rejecting messages exceeding 120 characters
-- Emitting the `AppreciationSent` event
-- Querying all appreciations, received appreciations, and sent appreciations
-
----
-
-## 📡 Deploying to Botchain Testnet
-
-1. Ensure your deployer wallet has testnet `BOHR` tokens for gas.
-2. Add your private key to `.env`:
-   ```env
-   PRIVATE_KEY=0x...
-   ```
-3. Run the deployment script:
-   ```bash
-   npx hardhat run scripts/deploy.ts --network botchain
-   ```
-4. Copy the deployed contract address printed in the terminal into `NEXT_PUBLIC_CONTRACT_ADDRESS` in `.env.local`.
 
 ---
 
@@ -189,4 +164,3 @@ All transactions, messages, sender addresses, and recipient addresses are publis
 ## 📄 License
 
 MIT
-

@@ -16,16 +16,16 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-6">
           <div className="flex items-center gap-1.5 text-zinc-400">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Botchain Testnet (Chain ID 968)</span>
+            <span>Botchain Mainnet (Chain ID 677)</span>
           </div>
 
           <a
-            href="https://scan.bohr.life"
+            href="https://scan.botchain.ai"
             target="_blank"
             rel="noreferrer"
             className="hover:text-zinc-300 transition-colors flex items-center gap-1"
           >
-            <span>Bohr Scan Explorer</span>
+            <span>Botchain Scan Explorer</span>
             <ExternalLink className="w-3 h-3" />
           </a>
 

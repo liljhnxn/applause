@@ -1,8 +1,9 @@
 # Applause — Whitepaper & Pitch Deck
 
 **Tagline:** *Give good work its recognition.*  
-**Network:** Botchain Testnet (Chain ID: 968)  
-**Contract Address:** [`0xEE2d9016cB14792eab9bC293cA8D93E8A3919F15`](https://scan.bohr.life/address/0xEE2d9016cB14792eab9bC293cA8D93E8A3919F15#code)  
+**Network:** Botchain Mainnet (Chain ID: 677)  
+**Native Currency:** BOT (Total Supply: 150,000,000)  
+**Contract Address:** [`0x8cDCC868F0E758A4902258738b7A0a872d459781`](https://scan.botchain.ai/address/0x8cDCC868F0E758A4902258738b7A0a872d459781#code)  
 **GitHub Repository:** [https://github.com/liljhnxn/applause](https://github.com/liljhnxn/applause)  
 **Date:** November 2026  
 
@@ -10,7 +11,7 @@
 
 ## 1. Executive Summary
 
-**Applause** is a lightweight, decentralized appreciation protocol deployed on **Botchain**. It provides an immutable, transparent, and non-financialized reputation and recognition layer for creators, developers, designers, and community members. 
+**Applause** is a lightweight, decentralized appreciation protocol deployed on **Botchain Mainnet**. It provides an immutable, transparent, and non-financialized reputation and recognition layer for creators, developers, designers, and community members. 
 
 In traditional Web2 and existing Web3 platforms, peer recognition is either ephemeral (lost in Discord or Slack chats) or strictly transactional (requiring token tipping, speculative assets, or paywalled platforms). **Applause** returns peer recognition to its purest form: permanent on-chain acknowledgment backed by the security and transparency of the Botchain blockchain.
 
@@ -53,10 +54,11 @@ Applause categorizes praise to ensure high-signal feedback:
 ### 5.1 Smart Contract Layer
 - **Contract Name:** `Applause.sol`
 - **Solidity Version:** `^0.8.20`
-- **Network:** Botchain Testnet (EVM Compatible)
-- **Chain ID:** `968`
-- **RPC URL:** `https://rpc.bohr.life`
-- **Block Explorer:** [https://scan.bohr.life](https://scan.bohr.life)
+- **Network:** Botchain Mainnet (EVM Compatible)
+- **Chain ID:** `677`
+- **Native Currency:** `BOT`
+- **RPC URL:** `https://rpc.botchain.ai`
+- **Block Explorer:** [https://scan.botchain.ai](https://scan.botchain.ai)
 
 #### Core Data Structure
 ```solidity
@@ -98,7 +100,7 @@ struct Appreciation {
 
 ### Slide 3: The Solution
 * Decentralized, public appreciation registry.
-* Direct wallet-to-wallet praise permanently etched into Botchain Testnet.
+* Direct wallet-to-wallet praise permanently etched into Botchain Mainnet.
 * Gas-conscious, zero-fee, zero-token mechanics.
 
 ### Slide 4: Product Showcase
@@ -113,7 +115,7 @@ struct Appreciation {
 * Early builder advantage within an expanding ecosystem.
 
 ### Slide 6: Roadmap
-* **Phase 1 (Completed):** Smart contract deployment, verification on Bohr Scan, responsive Next.js dApp.
+* **Phase 1 (Completed):** Smart contract deployment & verification on Botchain Mainnet (Chain ID 677), responsive Next.js dApp.
 * **Phase 2:** Discord and GitHub bots enabling on-chain praise directly from developer workspaces.
 * **Phase 3:** Soulbound Attestation NFTs for milestone achievements (e.g., 10+ "Great Design" recognitions).
 * **Phase 4:** Multi-community leaderboards and API for Web3 developer profiles.
@@ -122,7 +124,7 @@ struct Appreciation {
 
 ## 7. Official Resources & Links
 
-- **Smart Contract (Verified):** [0xEE2d9016cB14792eab9bC293cA8D93E8A3919F15](https://scan.bohr.life/address/0xEE2d9016cB14792eab9bC293cA8D93E8A3919F15#code)
+- **Smart Contract (Verified):** [0x8cDCC868F0E758A4902258738b7A0a872d459781](https://scan.botchain.ai/address/0x8cDCC868F0E758A4902258738b7A0a872d459781#code)
 - **Source Code (GitHub):** [https://github.com/liljhnxn/applause](https://github.com/liljhnxn/applause)
-- **RPC URL:** `https://rpc.bohr.life`
-- **Explorer:** [https://scan.bohr.life](https://scan.bohr.life)
+- **RPC URL:** `https://rpc.botchain.ai`
+- **Explorer:** [https://scan.botchain.ai](https://scan.botchain.ai)

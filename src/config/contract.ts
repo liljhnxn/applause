@@ -1,4 +1,4 @@
-import { botchainTestnet } from "./chain";
+import { botchainMainnet, botchainTestnet } from "./chain";
 import { APPLAUSE_ABI } from "../contracts/ApplauseAbi";
 
 // Default fallback contract address if not yet set in environment
@@ -8,7 +8,7 @@ export const APPLAUSE_CONTRACT_ADDRESS = (
   process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || DEFAULT_CONTRACT_ADDRESS
 ) as `0x${string}`;
 
-export const APPLAUSE_CHAIN = botchainTestnet;
+export const APPLAUSE_CHAIN = botchainMainnet;
 
 export interface CategoryInfo {
   id: number;

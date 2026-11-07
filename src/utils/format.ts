@@ -39,13 +39,13 @@ export function formatTimestamp(timestamp: bigint | number): string {
  * Returns block explorer address link
  */
 export function getExplorerAddressUrl(address: string): string {
-  return `https://scan.bohr.life/address/${address}`;
+  return `https://scan.botchain.ai/address/${address}`;
 }
 
 /**
  * Returns block explorer transaction link
  */
 export function getExplorerTxUrl(txHash: string): string {
-  return `https://scan.bohr.life/tx/${txHash}`;
+  return `https://scan.botchain.ai/tx/${txHash}`;
 }
 

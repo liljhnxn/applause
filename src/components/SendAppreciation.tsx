@@ -13,7 +13,7 @@ import {
   APPLAUSE_ABI,
   APPRECIATION_CATEGORIES,
 } from "@/config/contract";
-import { botchainTestnet } from "@/config/chain";
+import { botchainMainnet } from "@/config/chain";
 import { getExplorerTxUrl } from "@/utils/format";
 import {
   Sparkles,
@@ -60,7 +60,7 @@ export function SendAppreciation({ onSuccess }: SendAppreciationProps) {
     hash,
   });
 
-  const isWrongNetwork = isConnected && chain?.id !== botchainTestnet.id;
+  const isWrongNetwork = isConnected && chain?.id !== botchainMainnet.id;
 
   // Validate inputs
   useEffect(() => {
@@ -104,7 +104,7 @@ export function SendAppreciation({ onSuccess }: SendAppreciationProps) {
 
     if (!isConnected) return;
     if (isWrongNetwork) {
-      switchChain({ chainId: botchainTestnet.id });
+      switchChain({ chainId: botchainMainnet.id });
       return;
     }
 
@@ -347,11 +347,11 @@ export function SendAppreciation({ onSuccess }: SendAppreciationProps) {
             ) : isWrongNetwork ? (
               <button
                 type="button"
-                onClick={() => switchChain({ chainId: botchainTestnet.id })}
+                onClick={() => switchChain({ chainId: botchainMainnet.id })}
                 className="w-full py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-charcoal-950 text-sm font-semibold transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2"
               >
                 <AlertCircle className="w-4 h-4" />
-                <span>Switch to Botchain Testnet (968)</span>
+                <span>Switch to Botchain Mainnet (677)</span>
               </button>
             ) : (
               <button
